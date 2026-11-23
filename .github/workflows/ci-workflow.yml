@@ -17,6 +17,8 @@ jobs:
         run: uv python install
       - name: Install dependencies
         run: uv sync --locked --all-groups
+      - name: Install the code linting and formatting tool Ruff
+        run: uv tool install ruff
       - name: Run Linter
         run: uv ruff check
       - name: Run tests
