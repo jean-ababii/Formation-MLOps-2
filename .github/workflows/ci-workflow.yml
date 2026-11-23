@@ -19,8 +19,8 @@ jobs:
         run: uv sync --locked --all-groups
       - name: Install the code linting and formatting tool Ruff
         run: uv tool install ruff
-      - name: Run Linter
-        run: uv run ruff check .
+      - name: Run Linter ruff
+        run: ruff check --output-format=github --target-version=py39
       - name: Run tests
         run: uv run pytest
 
