@@ -20,7 +20,7 @@ jobs:
       - name: Install the code linting and formatting tool Ruff
         run: uv tool install ruff
       - name: Run Linter
-        run: uv ruff check
+        run: uv run ruff check .
       - name: Run tests
         run: uv run pytest
 
