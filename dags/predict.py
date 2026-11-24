@@ -26,12 +26,14 @@ def predict():
 
     # Start completing predict task
     def predict_with_io_task():
-        pass
+        predict_with_io(features_path=feature_path,
+                        model_path=MODEL_PATH,
+                        predictions_folder=PREDICTIONS_FOLDER)
 
     # End completing predict task
 
-    # feature_path = prepare_features_with_io_task() # noqa
-    # predict_with_io_task(feature_path=feature_path) # noqa
+    feature_path = prepare_features_with_io_task() # noqa
+    predict_with_io_task(feature_path=feature_path) # noqa
 
 
 predict_dag = predict()
